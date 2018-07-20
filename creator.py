@@ -14,8 +14,10 @@ class IssueCreator(unittest.TestCase):
 
     def create_issue(self):
         self.driver.get('https://github.com/ZoranPandovski/al-go-rithms/issues')
-        page = LoginPage(self.driver)
-        page.fill_sign_in()
+        login = LoginPage(self.driver)
+        login.fill_sign_in()
+        ci = IssuesPage(self.driver)
+        ci.create_issue()
 
 if __name__ == "__main__":
     ic = IssueCreator()

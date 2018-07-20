@@ -10,7 +10,7 @@ class LoginPageLocators(object):
 
 class IssuePageLocators(object):
     ISSUE = (By.LINK_TEXT, 'Add new algorithm, data structure, puzzle, cipher')
-    CLOSE_ISSUE = (By.CLASS_NAME, 'js-comment-and-button')
+    CLOSE_ISSUE = (By.NAME, 'comment_and_close')
     NEW_ISSUE = (By.LINK_TEXT, 'New issue')
     TITLE = (By.ID, 'issue_title')
     DESCRIPTION = (By.ID, 'issue_body')
