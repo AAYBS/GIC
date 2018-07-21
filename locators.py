@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
-# Locators
+
+# separate each page in different locator
 class LoginPageLocators(object):
     USER_NAME = (By.ID, 'login_field')
     PASSWORD = (By.ID, 'password')
