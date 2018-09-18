@@ -1,3 +1,4 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/AAYBS/GIC?branch=master)](https://bettercodehub.com/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4edd05c3ba8d409485e1c338741dfaf2)](https://www.codacy.com/app/ZoranPandovski/GIC?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AAYBS/GIC&amp;utm_campaign=Badge_Grade)
 [![Known Vulnerabilities](https://snyk.io/test/github/AAYBS/GIC/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/AAYBS/GIC?targetFile=requirements.txt)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ZoranPandovski/al-go-rithms/issues)
