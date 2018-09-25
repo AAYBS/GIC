@@ -4,7 +4,8 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ZoranPandovski/al-go-rithms/issues)
 
 # GitHub Issue Creator
-This project automates the creation of repetitive tasks, as creating GitHub issues to get more contributors. Page Object Model is used as a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. More information about [Selenium](https://able.bio/ZoranPandovski/introduction-to-selenium--75njv2f) or Page Object Models: [PageObjects](https://github.com/SeleniumHQ/selenium/wiki/PageObjects)
+This project automates the creation of repetitive tasks, as creating GitHub issues to get more contributors. 
+GitHub provides API action for most of the stuff that you can do through UI, check out [GitHub API](https://developer.github.com/v3/), but this project was created for fun to practice Selenium and POM design pattern. Page Object Model is used as a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. More information about [Selenium](https://able.bio/ZoranPandovski/introduction-to-selenium--75njv2f) or Page Object Models: [PageObjects](https://github.com/SeleniumHQ/selenium/wiki/PageObjects)
 
 ## Installation
 ```
