@@ -12,8 +12,8 @@ class IssueCreator(unittest.TestCase):
         self.config.read("config.ini")
 
     def create_issue(self):
-        self.issues_url = self.config.get('ISSUES', 'URL')
-        self.driver.get(issues_url)
+        self.issues_url = self.config.get('ISSUES', 'ISSUES_URL')
+        self.driver.get(self.issues_url)
         login = LoginPage(self.driver)
         login.fill_sign_in()
         ci = IssuesPage(self.driver)
