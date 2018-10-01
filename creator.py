@@ -1,7 +1,6 @@
 from selenium import webdriver
 from base import *
 import unittest
-import ConfigParser
 
 class IssueCreator(unittest.TestCase):
 
