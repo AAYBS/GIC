@@ -1,7 +1,7 @@
 from locators import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import ConfigParser
+import configparser
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from pages"""
@@ -9,7 +9,7 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 20)
-        self.config = ConfigParser.ConfigParser()
+        self.config = configparser.ConfigParser()
         self.config.read("config.ini")
 
     def find_element(self, *locator):
