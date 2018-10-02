@@ -1,10 +1,7 @@
 from locators import *
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import ConfigParser
-
-config = ConfigParser.ConfigParser()
-config.read("config.ini")
+import configparser
 
 class BasePage(object):
     """Base class to initialize the base page that will be called from pages"""
@@ -12,6 +9,8 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 20)
+        self.config = configparser.ConfigParser()
+        self.config.read("config.ini")
 
     def find_element(self, *locator):
         return self.driver.find_element(*locator)
@@ -36,15 +35,17 @@ class IssuesPage(BasePage):
         self.description_text = self.config.get('ISSUES', 'DESCRIPTION')
 
     def create_issue(self):
-        self.find_element(*self.locators.ISSUE).click()
-        self.wait_for_clickable(*self.locators.CLOSE_ISSUE).click()
+        # self.find_element(*self.locators.ISSUE).click()
+        # self.wait_for_clickable(*self.locators.CLOSE_ISSUE).click()
         self.find_element(*self.locators.NEW_ISSUE).click()
         self.wait_for_visible(self.locators.TITLE).send_keys(self.title_text)
-        self.wait_for_visible(self.locators.DESCRIPTION)\
-            .clear().send_keys(self.description_text)
+        self.wait_for_visible(self.locators.DESCRIPTION).clear()
+        self.wait_for_visible(self.locators.DESCRIPTION).send_keys(self.description_text)
         self.find_element(*self.locators.LABELS).click()
         labels_list = self.wait_for_clickable(self.locators.LABELS_LIST)
         self.driver.execute_script("arguments[0].click();", labels_list)
+        self.find_element(*self.locators.LABELS).click()
+        self.find_element(*self.locators.SUBMIT).click()
 
 
 class LoginPage(BasePage):
