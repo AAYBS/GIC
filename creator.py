@@ -4,13 +4,17 @@ import unittest
 from selenium import webdriver
 
 from base import *
-
+import unittest
+import configparser
 
 class IssueCreator(unittest.TestCase):
 
     def __init__(self):
         self.config = configparser.ConfigParser()
         self.driver = webdriver.Firefox()
+        self.config = configparser.ConfigParser()
+        self.config.read("config.ini")
+        self.start_page_url = self.config.get('URL', 'START_PAGE_URL')
 
     def create_issue(self):
         self.driver.get(self.get_url_from_config())
