@@ -20,7 +20,7 @@ Basic configuration options:
 USER_NAME='Your github user'
 PASSWORD='Your github password'
 
-#issue pasge configuration
+#issue page configuration
 [ISSUES]
 TITLE='Issue title'
 DESCRIPTION='Issue description'
