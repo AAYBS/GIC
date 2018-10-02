@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#config file
+config.ini
+
+#vscode
+.vscode
+
+#log file
+geckodriver.log
