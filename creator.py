@@ -9,8 +9,7 @@ class IssueCreator(unittest.TestCase):
         self.driver = webdriver.Firefox()
 
     def create_issue(self):
-        self.driver.get('https://github.com/ZoranPandovski/'
-                        'al-go-rithms/issues')
+        self.driver.get(config.get('ISSUES', 'URL'))
         login = LoginPage(self.driver)
         login.fill_sign_in()
         ci = IssuesPage(self.driver)
