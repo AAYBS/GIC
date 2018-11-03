@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b4cc57784e324eb5b1ebb8d68478277b)](https://app.codacy.com/app/ZoranPandovski/GIC?utm_source=github.com&utm_medium=referral&utm_content=AAYBS/GIC&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/AAYBS/GIC.svg?branch=master)](https://travis-ci.org/AAYBS/GIC)
 [![BCH compliance](https://bettercodehub.com/edge/badge/AAYBS/GIC?branch=master)](https://bettercodehub.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/AAYBS/GIC/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/AAYBS/GIC?targetFile=requirements.txt)
