@@ -36,7 +36,7 @@ class IssuesPage(BasePage):
 
     def create_issue(self):
         self.find_element(*self.locators.ISSUE).click()
-        self.wait_for_clickable(*self.locators.CLOSE_ISSUE).click()
+        self.wait_for_clickable(self.locators.CLOSE_ISSUE).click()
         self.find_element(*self.locators.NEW_ISSUE).click()
         self.wait_for_visible(self.locators.TITLE).send_keys(self.title_text)
         self.wait_for_visible(self.locators.DESCRIPTION)\

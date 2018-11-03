@@ -1,9 +1,6 @@
-import configparser
-import unittest
-
 from selenium import webdriver
-
 from base import *
+
 import unittest
 import configparser
 
