@@ -17,3 +17,4 @@ class IssuePageLocators(object):
     DESCRIPTION = (By.ID, 'issue_body')
     LABELS = (By.CLASS_NAME, 'discussion-sidebar-heading')
     LABELS_LIST = (By.CSS_SELECTOR, '[data-label-name="bug"]')
+    SUBMIT = (By.XPATH, "//button[@type='submit' and contains(., 'Submit new issue')]")

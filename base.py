@@ -35,15 +35,11 @@ class IssuesPage(BasePage):
         self.description_text = self.config.get('ISSUES', 'DESCRIPTION')
 
     def create_issue(self):
-        self.find_element(*self.locators.ISSUE).click()
-        self.wait_for_clickable(self.locators.CLOSE_ISSUE).click()
         self.find_element(*self.locators.NEW_ISSUE).click()
         self.wait_for_visible(self.locators.TITLE).send_keys(self.title_text)
         self.wait_for_visible(self.locators.DESCRIPTION)\
-            .clear().send_keys(self.description_text)
-        self.find_element(*self.locators.LABELS).click()
-        labels_list = self.wait_for_clickable(self.locators.LABELS_LIST)
-        self.driver.execute_script("arguments[0].click();", labels_list)
+            .send_keys(self.description_text)
+        self.wait_for_visible(self.locators.SUBMIT).click()
 
 
 class LoginPage(BasePage):

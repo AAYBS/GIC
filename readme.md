@@ -16,15 +16,22 @@ pip install -r requirements.txt
 ## Config Settings
 Basic configuration options:
 ```
-#login page configuration
+# Login page configuration
 [LOGIN]
-USER_NAME='Your github user'
-PASSWORD='Your github password'
+USER_NAME=your_username
+PASSWORD=your_password
 
-#issue page configuration
+# Issue page configuration
 [ISSUES]
-TITLE='Issue title'
-DESCRIPTION='Issue description'
+TITLE=Issue title
+DESCRIPTION=Issue description!
+
+# URL configuration
+[URL]
+# The starting page for the browser driver, can just be the same as DEFAULT_URL
+START_PAGE_URL = https://github.com/AAYBS/GIC/issues
+# The URL of the issues page of the repo which the tool will create an issue on
+DEFAULT_URL = https://github.com/AAYBS/GIC/issues
 ```
 
 ## Running project
