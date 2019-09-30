@@ -29,9 +29,9 @@ DESCRIPTION=Issue description!
 # URL configuration
 [URL]
 # The starting page for the browser driver, can just be the same as DEFAULT_URL
-START_PAGE_URL = https://github.com/AAYBS/GIC
-# The URL of the repo which the tool will create an issue on
-DEFAULT_URL = https://github.com/AAYBS/GIC
+START_PAGE_URL = https://github.com/AAYBS/GIC/issues
+# The URL of the issues page of the repo which the tool will create an issue on
+DEFAULT_URL = https://github.com/AAYBS/GIC/issues
 ```
 
 ## Running project
