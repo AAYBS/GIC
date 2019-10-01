@@ -25,13 +25,20 @@ PASSWORD=your_password
 [ISSUES]
 TITLE=Issue title
 DESCRIPTION=Issue description!
+# Comma separated list of already created label names
+LABELS=documentation,bug
+
+# Browser configuration
+[BROWSER]
+# One of CHROME, FIREFOX
+USE_BROWSER=CHROME
 
 # URL configuration
 [URL]
 # The starting page for the browser driver, can just be the same as DEFAULT_URL
-START_PAGE_URL = https://github.com/AAYBS/GIC/issues
+START_PAGE_URL = https://github.com/thockin/test/issues
 # The URL of the issues page of the repo which the tool will create an issue on
-DEFAULT_URL = https://github.com/AAYBS/GIC/issues
+DEFAULT_URL = https://github.com/thockin/test/issues
 ```
 
 ## Running project
