@@ -33,14 +33,26 @@ class IssuesPage(BasePage):
         super(IssuesPage, self).__init__(driver)
         self.title_text = self.config.get('ISSUES', 'TITLE')
         self.description_text = self.config.get('ISSUES', 'DESCRIPTION')
+        self.labels = self.config.get('ISSUES', 'LABELS').split(",")
 
     def create_issue(self):
         self.find_element(*self.locators.NEW_ISSUE).click()
         self.wait_for_visible(self.locators.TITLE).send_keys(self.title_text)
         self.wait_for_visible(self.locators.DESCRIPTION)\
             .send_keys(self.description_text)
+        self.set_labels(self.labels)
         self.wait_for_visible(self.locators.SUBMIT).click()
 
+    def set_labels(self, labels):
+        self.wait_for_visible(self.locators.LABELS).click()
+        for label in labels:
+
+            # A locator for the specific label option we're interested in
+            label_locator = list(self.locators.LABELS_OPTION)
+            label_locator[1] = label_locator[1].format(label_name=label)
+
+            self.wait_for_visible(label_locator).click()
+        self.wait_for_visible(self.locators.LABELS).click()
 
 class LoginPage(BasePage):
     """Login page action methods come here. in our e.g . Github/login.com"""

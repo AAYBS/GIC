@@ -15,6 +15,6 @@ class IssuePageLocators(object):
     NEW_ISSUE = (By.LINK_TEXT, 'New issue')
     TITLE = (By.ID, 'issue_title')
     DESCRIPTION = (By.ID, 'issue_body')
-    LABELS = (By.CLASS_NAME, 'discussion-sidebar-heading')
-    LABELS_LIST = (By.CSS_SELECTOR, '[data-label-name="bug"]')
+    LABELS = (By.ID, 'labels-select-menu')
+    LABELS_OPTION = (By.XPATH, "//div[@class='select-menu-item-text']//span[@class='name' and contains(., '{label_name}')]")
     SUBMIT = (By.XPATH, "//button[@type='submit' and contains(., 'Submit new issue')]")
