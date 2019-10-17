@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/AAYBS/GIC.svg?branch=master)](https://travis-ci.org/AAYBS/GIC)
 [![BCH compliance](https://bettercodehub.com/edge/badge/AAYBS/GIC?branch=master)](https://bettercodehub.com/)
 [![Known Vulnerabilities](https://snyk.io/test/github/AAYBS/GIC/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/AAYBS/GIC?targetFile=requirements.txt)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/AAYBS/GIC.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/AAYBS/GIC/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/AAYBS/GIC.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/AAYBS/GIC/context:python)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ZoranPandovski/al-go-rithms/issues)
 
 # GitHub Issue Creator
