@@ -1,8 +1,11 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from base import *
 
 import unittest
 import configparser
+
 
 class IssueCreator(unittest.TestCase):
 
@@ -10,10 +13,22 @@ class IssueCreator(unittest.TestCase):
         self.config = configparser.ConfigParser()
         self.config.read("config.ini")
 
+        headless_mode = self.config.getboolean("BROWSER", "HEADLESS_MODE")
+
         if self.config.get("BROWSER", "USE_BROWSER") == "CHROME":
-            self.driver = webdriver.Chrome()
+            chrome_options = ChromeOptions()
+
+            if headless_mode:
+                chrome_options.add_argument("--headless")
+
+            self.driver = webdriver.Chrome(options=chrome_options)
         elif self.config.get("BROWSER", "USE_BROWSER") == "FIREFOX":
-            self.driver = webdriver.Firefox()
+            firefox_options = FirefoxOptions()
+
+            if headless_mode:
+                firefox_options.add_argument("--headless")
+
+            self.driver = webdriver.Firefox(options=firefox_options)
         else:
             raise ValueError("USE_BROWSER should be one of CHROME, FIREFOX")
 
