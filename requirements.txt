@@ -1,2 +1,2 @@
-selenium==3.14.1
+selenium==4.15.1
 configparser==3.7.0
